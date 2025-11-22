@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Capsule</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Context Capsule 🧪</h1>
+
+        <div class="tabs">
+            <button id="main-tab-button" class="tab-button active">
+                Scrape & Hand-off
+            </button>
+            <button id="history-tab-button" class="tab-button">
+                History
+            </button>
+        </div>
+
+        <div id="main-view" class="tab-content active">
+            
+             <div class="timer-control-box">
+                <label for="delete-timer-select">Link Expiration (Future Feature):</label>
+                <select id="delete-timer-select" class="delete-timer-select" disabled>
+                    <option value="3600">1 Hour</option>
+                    <option value="14400">4 Hours</option>
+                    <option value="86400" selected>24 Hours</option>
+                    <option value="604800">1 Week</option>
+                </select>
+            </div>
+            
+            <button id="start-button" class="action-button">1. Scrape & Summarize</button>
+
+            <div id="status-message" class="status-initial">Click 'Scrape & Summarize' to begin.</div>
+            
+            <div id="summary-result" class="summary-area"></div>
+            
+            <div id="llm-options-container" class="llm-options-box" style="display: none;">
+                <h3 class="options-title">2. Choose Platform for Auto-Injection</h3>
+                <div class="llm-button-grid">
+                    </div>
+                <button id="copy-link-button" class="action-button secondary-button" style="margin-top: 15px;" disabled>
+                    Copy Full Prompt
+                </button>
+            </div>
+        </div>
+
+        <div id="history-view" class="tab-content">
+            <div class="history-controls">
+                <h2>Task History (Last 50)</h2>
+                <button id="clear-history-button" class="secondary-button small-button">Clear History</button>
+            </div>
+            <ul id="history-list" class="history-list">
+                <li class="history-placeholder">Loading history...</li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="sidepanel.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Context Capsule",
+  "version": "1.0",
+  "description": "Share chat context for platform-agnostic transfer.",
+  
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "tabs",            
+    "storage",
+    "unlimitedStorage" 
+  ],
+  
+  "side_panel": {
+    "default_path": "sidepanel.html" 
+  },
+  
+ 
+  "host_permissions": [
+    "<all_urls>", 
+    "https://chatgpt.com/*",         
+    "https://claude.ai/*",          
+    "https://www.perplexity.ai/*", 
+    "https://gemini.google.com/app/*",
+    "https://generativelanguage.googleapis.com/*" 
+  ],
+
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png"
+  },
+  
+  "action": {
+    "default_title": "Context Capsule"
+  },
+  
+  "background": {
+    "service_worker": "background.js",
+    "type": "module" 
+  }
+}
