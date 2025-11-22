@@ -1,4 +1,4 @@
-<img width="460" height="857" alt="image" src="https://github.com/user-attachments/assets/bc1ccabc-aded-4b8a-a96f-b8cc8883e6a6" /># Context Capsule 🧪 (Formerly Memshare)
+# Context Capsule 🧪 (Formerly Memshare)
 
 **A Proactive AI Workflow Orchestrator and Collaborative Intelligence Layer for Large Language Models.**
 
